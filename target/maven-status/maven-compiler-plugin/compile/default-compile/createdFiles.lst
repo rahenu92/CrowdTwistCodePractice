@@ -1,0 +1,9 @@
+com\TestBase\BaseClass.class
+com\TestMethods\CartSummaryPage.class
+com\TestMethods\CrowdTwistNewUserRegistraionPage.class
+com\TestMethods\LoginPageCrowdTwist.class
+com\TestMethods\ReusableMethods.class
+com\Utill\TestUtil.class
+com\TestMethods\ReusableMethods$1.class
+com\TestMethods\HomePageCrowdTwist.class
+com\Utill\ExtentReporterNG.class

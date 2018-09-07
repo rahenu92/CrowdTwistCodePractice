@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="TCrowdTwist Regression test" parallel ="methods" thread-count="1">
+
+
+<listeners>
+
+		<listener class-name="com.ExtentReportListener.ExtentReporterNG"/>
+
+</listeners>
+
+
+<test name="Daily regression Test Cases" >
+    	<classes>
+       		<class name="com.CorwdTwistTestCases.java.CrowdTwistNewUserRegistrationTest"></class>
+       		<class name="com.CorwdTwistTestCases.java.UserInfoUpdateTest"></class>
+			<class name="com.CorwdTwistTestCases.java.CheckOutTest"></class>       		
+       		
+       			  </classes>
+          
+           
+  </test>
+</suite>
