@@ -43,14 +43,24 @@ public class LogInTestCrowdTwist extends BaseClass{
 		login.LoginExistingUser(prop.getProperty("email"), prop.getProperty("pass"));
 		String a= reuse.fluentWaitForElement(FromHomePage.UserInfoHeader).getText();
 		System.out.println(a);
-		softassert.assertNotEquals(reuse.fluentWaitForElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")).getText(),
+		softassert.assertNotEquals(reuse.fluentWaitForElement(By.xpath("//header[@id='header']/div[2]/div/div/nav/div[1]/a/span")).getText(),
 				"Sign In");
 		System.out.println("The User name is :"
 				+driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")).getText());
 		softassert.assertAll();	
 }
 
-
+@Test 
+	public void ForgotYourPasswordTest(){
+	
+	login.ForgetPassword(prop.getProperty("email"));
+	
+	softassert.assertEquals(reuse.fluentWaitForElement(login.PasswordRestSucessMessage).getText(),
+			"A confirmation email has been sent to your address");
+	System.out.println("The User name is :"
+			+driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")).getText());
+	softassert.assertAll();	
+}
 
 
 
