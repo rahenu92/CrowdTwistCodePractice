@@ -44,7 +44,7 @@ public class LogInTestCrowdTwist extends BaseClass{
 		String a= reuse.fluentWaitForElement(FromHomePage.UserInfoHeader).getText();
 		System.out.println(a);
 		softassert.assertNotEquals(reuse.fluentWaitForElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")).getText(),
-				prop.getProperty("YourInfoFname") + prop.getProperty("YourInfolname"));
+				"Sign In");
 		System.out.println("The User name is :"
 				+driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")).getText());
 		softassert.assertAll();	
